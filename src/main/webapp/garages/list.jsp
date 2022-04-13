@@ -16,8 +16,21 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 <main>
     <div class="container">
         <div class="row">
-            <div class="card mx-3" style="width: 18rem;">
 
+            <c:forEach var="garage" items="${garages}">
+                <div class="card m-3" style="width: 18rem;">
+                <img src="${garage.image}"
+                     class="card-img-top"
+                     alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">${garage.nom}</h5>
+                    <p class="card-text">${garage.description}</p>
+                    <a href="http://localhost:8080/garages/detail.jsp" class="btn btn-primary">Voir le détail</a>
+                </div>
+            </div>
+            </c:forEach>
+            
+            <div class="card mx-3" style="width: 18rem;">
                 <img src="https://cdn.motor1.com/images/mgl/ykO4K/s1/4x3/bmw-4er-gran-coupe-2021.webp"
                      class="card-img-top"
                      alt="...">
