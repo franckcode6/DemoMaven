@@ -26,8 +26,8 @@ public class GarageServlet extends HttpServlet {
         ArrayList<Garage> garages = new ArrayList<Garage>();
         try {
             garages = this.gs.findAll();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
         }
 
         //Afficher la vue
