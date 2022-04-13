@@ -1,11 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Franck
-  Date: 13/04/2022
-  Time: 11:39
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c"
+uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Detail du garage {nom du garage}</title>
@@ -21,7 +16,6 @@
 
     <div class="row">
         <div class="col-md-4">
-
             <img src="https://cdn.motor1.com/images/mgl/ykO4K/s1/4x3/bmw-4er-gran-coupe-2021.webp" class="card-img-top"
                  alt="...">
         </div>

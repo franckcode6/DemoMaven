@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c"
+uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Ajout de voiture</title>
@@ -14,6 +16,10 @@
 <main>
     <div class="container">
         <div class="row">
+
+            <c:if test="${1 == 1}">
+                <h2>1 est bien égal à un</h2>
+            </c:if>
             <form action="">
                 <div class="form-group">
                     <label class="form-label" for="nom">Nom du garage</label>
