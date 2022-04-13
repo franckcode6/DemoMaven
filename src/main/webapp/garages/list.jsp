@@ -29,7 +29,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                 </div>
             </div>
             </c:forEach>
-            
+
             <div class="card mx-3" style="width: 18rem;">
                 <img src="https://cdn.motor1.com/images/mgl/ykO4K/s1/4x3/bmw-4er-gran-coupe-2021.webp"
                      class="card-img-top"
