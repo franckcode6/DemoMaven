@@ -51,7 +51,7 @@
                 </div>
                 <div class="mt-4">
                     <input type="submit" class="btn btn-success">
-                    <a href="http://localhost:8080/garages/list.jsp" class="btn btn-secondary">Retour à la liste</a>
+                    <a href="http://localhost:8080/garages/list.jsp" class="btn btn-secondary float-end">Retour à la liste</a>
                 </div>
             </form>
         </div>
