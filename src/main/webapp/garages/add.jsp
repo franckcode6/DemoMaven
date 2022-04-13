@@ -18,7 +18,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
         <div class="row">
 
             <c:if test="${1 == 1}">
-                <h2>1 est bien égal à un</h2>
+                <!--h2>1 est bien égal à un</h2-->
             </c:if>
             <form action="">
                 <div class="form-group">
