@@ -8,7 +8,7 @@ public class Database {
 
     public static Connection getConnexion() throws SQLException, ClassNotFoundException{
         Class.forName("com.mysql.cj.jdbc.Driver");
-        String url = "jdbc:mysql://localhost/garage_mvc?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8";
+        String url = "jdbc:mysql://localhost:3306/garage_mvc?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8";
         String user = "root";
         String password = "";
 

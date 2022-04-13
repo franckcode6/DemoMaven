@@ -1,5 +1,6 @@
 package servlets;
 import models.Garage;
+import services.GarageService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,34 +8,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 @WebServlet("/")
 public class GarageServlet extends HttpServlet {
 
+    private GarageService gs;
+
+    public GarageServlet(){
+        this.gs = new GarageService();
+    }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //Récupérer les données
         ArrayList<Garage> garages = new ArrayList<Garage>();
-        Garage garage1 = new Garage(1,
-                "DriveIn",
-                "Garage de moto",
-                "https://images.eplaque.fr/wp-content/uploads/2020/03/11153010/carte-grise-moto.jpg",
-                "2",
-                "Rue Jacquet",
-                "13000",
-                "Marseille");
-        garages.add(garage1);
-
-        Garage garage2 = new Garage(2,
-                "DriveIn",
-                "Garage de moto",
-                "https://images.eplaque.fr/wp-content/uploads/2020/03/11153010/carte-grise-moto.jpg",
-                "3",
-                "Rue Jacquet",
-                "06000",
-                "Nice");
-        garages.add(garage2);
+        try {
+            garages = this.gs.findAll();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
         //Afficher la vue
         request.setAttribute("garages", garages);
